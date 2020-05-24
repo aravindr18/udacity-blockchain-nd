@@ -216,7 +216,7 @@ class Blockchain {
                 if(i == 0 && block.previousBlockHash != null){
                     errorLog.push("Hash Validation failed for Genesis Block")
                 }
-                else if(block.previousBlockHash != self.chain[i-1].previousBlockHash){
+                else if(i > 0 && block.previousBlockHash != self.chain[i-1].previousBlockHash){
                     errorLog.push("Previous Block Hash Validation Failed for Block:" + i)
                 }
                 block.validate().then(res => {
