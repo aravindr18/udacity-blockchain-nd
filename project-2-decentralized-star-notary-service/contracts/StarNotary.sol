@@ -14,14 +14,13 @@ contract StarNotary is ERC721 {
     // Implement Task 1 Add a name and symbol properties
     // name: Is a short name to your token
     // symbol: Is a short string like 'USD' -> 'American Dollar'
-    
+    constructor() ERC721('EthStar', 'ETS') public {}
 
     // mapping the Star with the Owner Address
     mapping(uint256 => Star) public tokenIdToStarInfo;
     // mapping the TokenId and price
     mapping(uint256 => uint256) public starsForSale;
 
-    
     // Create Star using the Struct
     function createStar(string memory _name, uint256 _tokenId) public { // Passing the name and tokenId as a parameters
         Star memory newStar = Star(_name); // Star is an struct so we are creating a new Star
@@ -46,8 +45,9 @@ contract StarNotary is ERC721 {
         uint256 starCost = starsForSale[_tokenId];
         address ownerAddress = ownerOf(_tokenId);
         require(msg.value > starCost, "You need to have enough Ether");
-        _transferFrom(ownerAddress, msg.sender, _tokenId); // We can't use _addTokenTo or_removeTokenFrom functions, now we have to use _transferFrom
-        address payable ownerAddressPayable = _make_payable(ownerAddress); // We need to make this conversion to be able to use transfer() function to transfer ethers
+        _transfer(ownerAddress, msg.sender, _tokenId); // We can't use _addTokenTo or_removeTokenFrom functions, now we have to use _transferFrom
+        // We need to make this conversion to be able to use transfer() function to transfer ethers
+        address payable ownerAddressPayable = _make_payable(ownerAddress);
         ownerAddressPayable.transfer(starCost);
         if(msg.value > starCost) {
             msg.sender.transfer(msg.value - starCost);
@@ -57,6 +57,9 @@ contract StarNotary is ERC721 {
     // Implement Task 1 lookUptokenIdToStarInfo
     function lookUptokenIdToStarInfo (uint _tokenId) public view returns (string memory) {
         //1. You should return the Star saved in tokenIdToStarInfo mapping
+        // Check if the token exists and throw error otherwise
+        require(bytes(tokenIdToStarInfo[_tokenId].name).length != 0, "Token Id does not exist");
+        return tokenIdToStarInfo[_tokenId].name;
     }
 
     // Implement Task 1 Exchange Stars function
@@ -65,12 +68,20 @@ contract StarNotary is ERC721 {
         //2. You don't have to check for the price of the token (star)
         //3. Get the owner of the two tokens (ownerOf(_tokenId1), ownerOf(_tokenId1)
         //4. Use _transferFrom function to exchange the tokens.
+        require(msg.sender == ownerOf(_tokenId1) || msg.sender == ownerOf(_tokenId2),
+                "The Sender is not the owner of token specified for exchange!");
+        address _ownerToken1 = ownerOf(_tokenId1);
+        address _ownerToken2 = ownerOf(_tokenId2);
+        _transfer(_ownerToken1, _ownerToken2, _tokenId1);
+        _transfer(_ownerToken2, _ownerToken1, _tokenId2);
     }
 
     // Implement Task 1 Transfer Stars
     function transferStar(address _to1, uint256 _tokenId) public {
         //1. Check if the sender is the ownerOf(_tokenId)
         //2. Use the transferFrom(from, to, tokenId); function to transfer the Star
+        require(msg.sender == ownerOf(_tokenId), 'Sender is not the owner of token!');
+        _transfer(msg.sender, _to1, _tokenId);
     }
 
 }
