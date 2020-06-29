@@ -2589,6 +2589,39 @@
     "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {
+        "0x28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee07142": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerAdded",
+          "type": "event"
+        },
+        "0xe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f098": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x7581d9AeA03a1Ff9290C684cC61843036046ECEf",
+      "transactionHash": "0xc1ee8cadfd82d82495d3c02f5aa37aad0c38ff04a27397feeffea04a2e801017"
+    },
     "1593303991832": {
       "events": {
         "0x28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee07142": {
@@ -2624,7 +2657,7 @@
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-06-28T00:27:29.349Z",
+  "updatedAt": "2020-06-29T00:35:40.685Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
