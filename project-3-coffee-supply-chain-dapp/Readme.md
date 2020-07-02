@@ -20,9 +20,9 @@
 - solidity-version: `0.6.2`
 
 #### Contract Details 
-- contract address: `0xaa45250773C34e43CB17cC73Ab3AC6A822462B43`
-- transaction hash: `0xa30e738186bce289b54619091aec22b6eb364507ca547622484f7dee95e9aa0a` 
-- Etherscan: https://rinkeby.etherscan.io/address/0xaa45250773c34e43cb17cc73ab3ac6a822462b43
+- contract address: `0x0BFc5D73D7Cf950d2d928568Ce95413485783b8C`
+- transaction hash: `0xa4795ffae4406bc45e1b4ff2a001aac40d9fb163f1a18dd5a8f5789e028efc11` 
+- Etherscan: https://rinkeby.etherscan.io/address/0x0BFc5D73D7Cf950d2d928568Ce95413485783b8C
 
 
 #### Running the project 
