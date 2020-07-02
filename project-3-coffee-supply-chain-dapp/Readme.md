@@ -20,6 +20,12 @@
 - solidity-version: `0.6.2`
 
 #### Contract Details 
-- contract address: `0xf7DD4c62aA0a2647f279CBe275114409a080534D`
-- transaction hash: `0x5d6da03b47ec732048fb0be2cad6aba1b261cf9fa5766f7c0378e522ab700357` 
-- Etherscan: https://rinkeby.etherscan.io/address/0xf7DD4c62aA0a2647f279CBe275114409a080534D
+- contract address: `0xaa45250773C34e43CB17cC73Ab3AC6A822462B43`
+- transaction hash: `0xa30e738186bce289b54619091aec22b6eb364507ca547622484f7dee95e9aa0a` 
+- Etherscan: https://rinkeby.etherscan.io/address/0xaa45250773c34e43cb17cc73ab3ac6a822462b43
+
+
+#### Running the project 
+1. install npm packages `npm install`
+2. run `npm run dev` which will start a local webserver at `localhost:8080`  
+3. If you would like to run the blockchain locally run `truffle migrate` and configure metamask client to connect to the local blockchain

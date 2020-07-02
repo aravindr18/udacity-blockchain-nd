@@ -15,8 +15,33 @@
         <hr>
         <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
     </div>
-
+    <h2> Register Role</h2>
     <div id="ftc-harvest">
+        <div class="form-group">
+            Farmer Address
+            <br>
+            <input class="input-field" type="text" id="farmerAddr" name="farmerAddr">
+            <button class="btn-addRole" id="button" type="button" data-id="11">Register</button>
+            <br>
+            Distributor Address
+            <br>
+            <input type="text" id="distributorAddr" name="distributorAddr">
+            <button class="btn-addRole" id="button" type="button" data-id="12">Register</button>
+            <br>
+            Retailer Address
+            <br>
+            <input type="text" id="retailerAddr" name="retailerAddr" size="50">
+            <button class="btn-addRole" id="button" type="button" data-id="13">Register</button>
+            <br>
+            Consumer Address
+            <br>
+            <input type="text" id="consumerAddr" name="consumerAddr" size="50">
+            <button class="btn-addRole" id="button" type="button" data-id="14">Register</button>
+            <br>
+            <br>
+            </div>
+        </div>
+        <div class=form-break></div>
         <h2>Product Overview</h2>
         <div class="form-group">
             SKU
@@ -32,6 +57,21 @@
                 <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
                 <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
             </div>
+            <br>
+            </div>
+        </div>
+        <div class=form-break></div>
+        <h2>Fetched Data</h2>
+        <div class = "form-group">
+            <h4 id='one'></h4>
+            <h4 id='two'></h4>
+            <h4 id='three'></h4>
+            <h4 id='four'></h4>
+            <h4 id='five'></h4>
+            <h4 id='six'></h4>
+            <h4 id='seven'></h4>
+            <h4 id='eight'></h4>
+            <h4 id="nine"></h4>
         </div>
         <div class=form-break></div>
         <h2>Farm Details</h2>
@@ -76,7 +116,7 @@
             <br>
             <input type="text" id="retailerID" name="retailerID" value="0x0fb2bfefd526966c87efa19f6693d50971763fc2"
                 size="50"><br>
-            Distributor ID
+            Consumer ID
             <br>
             <input type="text" id="consumerID" name="consumerID" value="0x5d777e9127b28fb119e81a6304278a0a21bef1c4"
                 size="50"><br>

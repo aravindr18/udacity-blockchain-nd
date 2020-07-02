@@ -211,6 +211,5 @@ contract('SupplyChain', function(accounts) {
         assert.equal(resultBufferTwo[7], retailerID, 'Error: Missing or Invalid retailerID');    
         assert.equal(resultBufferTwo[8], consumerID, 'Error: Missing or Invalid consumerID');    
     })
-
 });
 
