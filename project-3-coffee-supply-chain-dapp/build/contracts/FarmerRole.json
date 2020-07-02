@@ -2619,45 +2619,12 @@
         }
       },
       "links": {},
-      "address": "0xbD77a016B2b5B890b9Bd040674C5C63f36FCC96d",
-      "transactionHash": "0x4c66437fda3396d38650ada336c44db431ff53ca9144a0f1e62e63f40e097b97"
-    },
-    "1593303991832": {
-      "events": {
-        "0x2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "FarmerAdded",
-          "type": "event"
-        },
-        "0xa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f2": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "internalType": "address",
-              "name": "account",
-              "type": "address"
-            }
-          ],
-          "name": "FarmerRemoved",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xf2ee0b0Cdcae5013930B92c0Ba54F7F7f1933613",
-      "transactionHash": "0xd686ab77aae83e56baba01a619545ea726a329b72279853cf61cf745fa55984b"
+      "address": "0x8c585390e496061B934A32a1ABb2D497eAaFB919",
+      "transactionHash": "0xbb2af190771d4df8719712b5937f33be0666983972cc78264cd075a9f1aba278"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-06-29T00:35:40.672Z",
+  "updatedAt": "2020-07-02T00:59:54.882Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
